@@ -1,0 +1,66 @@
+{
+  "go-api": {
+    "prefix": "ac",
+    "description": "rest api comment",
+    "body": [
+      "// @Tags ${1}",
+      "// @Summary ${2:分页获取列表}",
+      "// @Security ApiKeyAuth",
+      "// @Accept application/json",
+      "// @Produce application/json",
+      "// @Param data body model.${3:Model} true \"${4:分页获取列表}\"",
+      "// @Param param query request.${5:PageInfo} true \"${6:分页获取列表}\"",
+      "// @Success 200 {string} string {'success':true,'data':{},'msg':'操作成功'}",
+      "// @Failure 200 {string} string {'success':false,'data'{},'msg':'获取数据失败'}",
+      "// @Router /${7:path}/${8:action} [${9:get}]"
+   ]
+  },
+  "go-file": {
+    "prefix": "ft",
+    "description": "file comment",
+    "body": [
+      "// @Title ${1:$TM_FILENAME_BASE}",
+      "// @Description ${2:文件描述}",
+      "// @Author ${3:作者} $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+      "// @Update ${4:作者} $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+    ]
+  },
+  "go-func": {
+    "prefix": "fc",
+    "description": "func comment",
+    "body": [
+      "// @title ${1:函数名称}",
+      "// @description ${2:函数的详细描述}",
+      "// @param ${3:输入参数名} ${4|int,string,interface{},[]interface,func|} \"${5:解释}\"",
+      "// @return ${6:返回参数名} ${7|int,string,interface{},[]interface,func|} \"${8:解释}\""
+    ]
+  },
+  "go-date": {
+    "prefix": "fd",
+    "description": "func date line comment",
+    "body": [
+      "// @auth ${1:作者} ${2:$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE}",
+    ]
+  },
+  "go-param": {
+    "prefix": "fp",
+    "description": "func param line comment",
+    "body": [
+       "// @param ${1:输入参数名} ${2|int,string,interface{},[]interface,func|} \"${3:解释}\""
+    ]
+  },
+  "go-return": {
+    "prefix": "fr",
+    "description": "func return line comment",
+    "body": [
+       "// @return ${1:返回参数名} ${2|int,string,interface{},[]interface,func|} \"${3:解释}\""
+    ]
+  },
+  "go-struct": {
+    "prefix": "sc",
+    "description": "struct comment",
+    "body": [
+       "// ${1:名称} ${2:描述}"
+    ]
+  }
+}
